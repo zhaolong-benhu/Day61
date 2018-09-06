@@ -1,0 +1,31 @@
+<script>
+//服务器端验证提示
+$(function(){
+	if('<?php echo $model->getError('fullname');?>'){
+		$('input[name="fullname"]').css('background-color','orange').attr('placeholder','<?php echo $model->getError('fullname');?>');
+	}
+	if('<?php echo $model->getError('mobile');?>'){
+		$('input[name="mobile"]').css('background-color','orange').val('').attr('placeholder','<?php echo $model->getError('mobile');?>');
+	}
+	if('<?php echo $model->getError('signature');?>'){
+		$('textarea[name="signature"]').css('background-color','orange').attr('placeholder','<?php echo $model->getError('signature');?>');
+	}
+	/*if('<?php echo $model->getError('cover');?>'){
+		$('form[target="hiframe"]').eq(0).find('a').css('background-color','orange');
+	}*/
+});
+</script>
+<div class="contents_box pr32 fl box_s mt28 mb50 pl32 w_100">
+	<div class="bgcol_02 b_rad8 box_s pl40 pr40 pr w_100 fl">
+		<div class="page_box_top_l pa z1000 t0"></div>
+		<div class="page_box_top"><span class="pa font34 line_h66 col_01 z1000 l55">报名已结束</span></div>
+		<div class="page_box_top_r pa z1000 t0"></div>
+			<div class="font20 col_04 line_h90">感谢您的关注！</div>
+           	<div class="mb15 box_s fl w_100">
+				<a href="index.php?a=rank">
+				<input type="button" value="查看插红旗排行" class="b_rad8 h80 bgcol_03 tc font32 mb20 fl w_100 dis_b line_h80 col_01 ber_none" >     
+				</a>
+           	</div>
+		</div>
+	</div>
+</div>
